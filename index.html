@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Træværk – Håndlavede Skærebrætter i Massiv Bøg</title>
+<meta name="description" content="Håndlavede skærebrætter i FSC-certificeret massiv bøg med personlig pyrografi-indgravering. Perfekt gave til bryllup, fødselsdag og mærkedage.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --cream: #F5F0E8;
+    --warm-white: #FAF8F4;
+    --bark: #3D2B1A;
+    --bark-light: #6B4A30;
+    --bark-mid: #8B6347;
+    --grain: #C4A882;
+    --grain-light: #E0CDB5;
+    --moss: #4A5C3E;
+    --moss-light: #6B7F5E;
+    --ash: #9B8F82;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Jost', sans-serif;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--cream);
+    color: var(--bark);
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.25rem 4vw;
+    background: rgba(245, 240, 232, 0.92);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--grain-light);
+  }
+
+  .nav-logo {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--bark);
+    text-decoration: none;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--bark-mid);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--bark); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 5rem;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 8vw 5vw 8vw 8vw;
+    position: relative;
+  }
+
+  .hero-left::before {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: -8%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(ellipse, var(--grain-light) 0%, transparent 70%);
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--moss);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero-eyebrow::before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 1px;
+    background: var(--moss);
+  }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 5vw, 4.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+    color: var(--bark);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--bark-mid);
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+    color: var(--bark-mid);
+    max-width: 34ch;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+  }
+
+  .hero-cta-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 0.9rem 2.4rem;
+    background: var(--bark);
+    color: var(--cream);
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.25s;
+  }
+
+  .btn-primary:hover { background: var(--bark-light); }
+
+  .btn-secondary {
+    display: inline-block;
+    padding: 0.9rem 2.4rem;
+    background: transparent;
+    color: var(--bark);
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--grain);
+    cursor: pointer;
+    transition: border-color 0.25s, color 0.25s;
+  }
+
+  .btn-secondary:hover { border-color: var(--bark); }
+
+  .hero-right {
+    background: var(--warm-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Cutting board illustration placeholder */
+  .board-illustration {
+    width: 100%;
+    max-width: 380px;
+    aspect-ratio: 4/5;
+    position: relative;
+  }
+
+  .board-illustration svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  /* ── SECTION COMMONS ── */
+  section { padding: 8rem 8vw; }
+
+  .section-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--moss);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .section-label::before {
+    content: '';
+    display: block;
+    width: 2rem;
+    height: 1px;
+    background: var(--moss);
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--bark);
+    margin-bottom: 1.5rem;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--bark-mid);
+  }
+
+  /* ── PRODUCTS ── */
+  .products-section {
+    background: var(--warm-white);
+  }
+
+  .products-header {
+    max-width: 50ch;
+    margin-bottom: 5rem;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2px;
+  }
+
+  .product-card {
+    background: var(--cream);
+    padding: 4rem 3rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s;
+  }
+
+  .product-card:hover { background: #EDE7DA; }
+
+  .product-badge {
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--moss);
+    background: rgba(74, 92, 62, 0.1);
+    padding: 0.35rem 0.85rem;
+    display: inline-block;
+    margin-bottom: 2rem;
+  }
+
+  .product-name {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--bark);
+    margin-bottom: 0.5rem;
+  }
+
+  .product-dims {
+    font-size: 0.85rem;
+    color: var(--ash);
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+  }
+
+  .product-board-svg {
+    margin: 2rem 0;
+  }
+
+  .product-features {
+    list-style: none;
+    margin-bottom: 2.5rem;
+  }
+
+  .product-features li {
+    font-size: 0.88rem;
+    color: var(--bark-mid);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--grain-light);
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .product-features li::before {
+    content: '→';
+    color: var(--moss);
+    font-size: 0.75rem;
+  }
+
+  .product-price {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--bark);
+    margin-bottom: 0.25rem;
+  }
+
+  .product-price-note {
+    font-size: 0.78rem;
+    color: var(--ash);
+    margin-bottom: 2rem;
+  }
+
+  /* ── PROCESS ── */
+  .process-section {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 8vw;
+    align-items: start;
+    padding: 8rem 8vw;
+  }
+
+  .process-sticky {
+    position: sticky;
+    top: 8rem;
+  }
+
+  .process-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .process-step {
+    display: grid;
+    grid-template-columns: 3rem 1fr;
+    gap: 1.5rem;
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--grain-light);
+  }
+
+  .step-num {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--grain);
+    line-height: 1;
+    padding-top: 0.2rem;
+  }
+
+  .step-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--bark);
+    margin-bottom: 0.5rem;
+  }
+
+  .step-content p {
+    font-size: 0.9rem;
+    color: var(--bark-mid);
+    line-height: 1.8;
+  }
+
+  /* ── MATERIALS ── */
+  .materials-section {
+    background: var(--bark);
+    color: var(--cream);
+    padding: 8rem 8vw;
+  }
+
+  .materials-section .section-label { color: var(--grain); }
+  .materials-section .section-label::before { background: var(--grain); }
+  .materials-section .section-title { color: var(--cream); }
+  .materials-section .section-title em { color: var(--grain); }
+
+  .materials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 4rem;
+  }
+
+  .material-item { border-top: 1px solid rgba(196, 168, 130, 0.3); padding-top: 2rem; }
+
+  .material-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .material-title {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--cream);
+    margin-bottom: 0.75rem;
+  }
+
+  .material-text {
+    font-size: 0.88rem;
+    color: var(--grain);
+    line-height: 1.8;
+  }
+
+  /* ── ENGRAVING ── */
+  .engraving-section {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 8vw;
+    align-items: center;
+    padding: 8rem 8vw;
+    background: var(--warm-white);
+  }
+
+  .engraving-visual {
+    aspect-ratio: 1;
+    background: var(--cream);
+    border: 1px solid var(--grain-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem;
+    position: relative;
+  }
+
+  .engraving-visual svg {
+    width: 100%;
+    height: auto;
+  }
+
+  .engraving-text .section-title {
+    margin-bottom: 1.5rem;
+  }
+
+  .engraving-desc {
+    font-size: 0.95rem;
+    color: var(--bark-mid);
+    line-height: 1.9;
+    margin-bottom: 2.5rem;
+  }
+
+  /* ── CONTACT / ORDER ── */
+  .order-section {
+    padding: 8rem 8vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8vw;
+    align-items: start;
+  }
+
+  .order-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bark-mid);
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--grain);
+    padding: 0.75rem 0;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--bark);
+    outline: none;
+    transition: border-color 0.2s;
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-bottom-color: var(--bark);
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+
+  .form-note {
+    font-size: 0.8rem;
+    color: var(--ash);
+    line-height: 1.7;
+    padding: 1.5rem;
+    border: 1px solid var(--grain-light);
+    background: var(--warm-white);
+  }
+
+  /* ── STRIPE CHECKOUT ── */
+  .checkout-summary {
+    background: var(--warm-white);
+    border: 1px solid var(--grain-light);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .checkout-summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.88rem;
+    color: var(--bark-mid);
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--grain-light);
+  }
+
+  .checkout-summary-row:last-child {
+    border-bottom: none;
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--bark);
+    padding-top: 0.75rem;
+    margin-top: 0.25rem;
+  }
+
+  .checkout-summary-row span:last-child {
+    font-weight: 500;
+  }
+
+  .payment-methods {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+
+  .payment-method-btn {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.85rem 1rem;
+    border: 1.5px solid var(--grain-light);
+    background: var(--warm-white);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 400;
+    letter-spacing: 0.06em;
+    color: var(--bark-mid);
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  .payment-method-btn.active {
+    border-color: var(--bark);
+    color: var(--bark);
+    background: var(--cream);
+  }
+
+  .payment-method-btn:hover {
+    border-color: var(--bark-mid);
+  }
+
+  #stripe-card-element {
+    border-bottom: 1px solid var(--grain);
+    padding: 0.75rem 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .stripe-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.72rem;
+    color: var(--ash);
+    letter-spacing: 0.05em;
+    margin-top: 0.75rem;
+  }
+
+  .stripe-badge svg { opacity: 0.5; }
+
+  #payment-error {
+    color: #c0392b;
+    font-size: 0.82rem;
+    margin-top: 0.5rem;
+    display: none;
+  }
+
+  #payment-success {
+    text-align: center;
+    padding: 3rem 1rem;
+    display: none;
+  }
+
+  #payment-success .success-icon {
+    width: 4rem;
+    height: 4rem;
+    background: var(--moss);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+  }
+
+  #payment-success h3 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--bark);
+    margin-bottom: 0.75rem;
+  }
+
+  #payment-success p {
+    font-size: 0.9rem;
+    color: var(--bark-mid);
+    line-height: 1.8;
+  }
+
+  .mobilepay-info {
+    background: var(--warm-white);
+    border: 1px solid var(--grain-light);
+    padding: 1.5rem;
+    display: none;
+  }
+
+  .mobilepay-info.visible { display: block; }
+
+  .mobilepay-number {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--bark);
+    margin: 0.5rem 0;
+    letter-spacing: 0.05em;
+  }
+
+  .btn-copy {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid var(--grain);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--bark-mid);
+    cursor: pointer;
+    transition: border-color 0.2s;
+    margin-top: 0.75rem;
+  }
+
+  .btn-copy:hover { border-color: var(--bark); color: var(--bark); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--bark);
+    color: var(--grain);
+    padding: 4rem 8vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .footer-logo {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--cream);
+  }
+
+  .footer-text {
+    font-size: 0.8rem;
+    color: var(--grain);
+    line-height: 1.8;
+  }
+
+  /* ── DIVIDER ── */
+  .grain-divider {
+    height: 1px;
+    background: var(--grain-light);
+    margin: 0;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    .hero { grid-template-columns: 1fr; }
+    .hero-right { min-height: 50vw; padding: 3rem; }
+    .process-section { grid-template-columns: 1fr; }
+    .process-sticky { position: static; }
+    .materials-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .engraving-section { grid-template-columns: 1fr; }
+    .order-section { grid-template-columns: 1fr; }
+    nav .nav-links { display: none; }
+  }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-eyebrow { animation: fadeUp 0.7s ease both; }
+  .hero-title { animation: fadeUp 0.7s 0.15s ease both; }
+  .hero-sub { animation: fadeUp 0.7s 0.25s ease both; }
+  .hero-cta-group { animation: fadeUp 0.7s 0.35s ease both; }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Træværk</a>
+  <ul class="nav-links">
+    <li><a href="#produkter">Produkter</a></li>
+    <li><a href="#proces">Processen</a></li>
+    <li><a href="#gravering">Gravering</a></li>
+    <li><a href="#bestil">Bestil</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">FSC-certificeret massiv bøg</p>
+    <h1 class="hero-title">
+      Håndlavede skærebrætter<br>
+      med <em>personlig gravering</em>
+    </h1>
+    <p class="hero-sub">
+      Hvert bræt skæres, slibes og olieres i hånden. 
+      Din tekst brændes ind med pyrografi – en gave der varer livet ud.
+    </p>
+    <div class="hero-cta-group">
+      <a href="#bestil" class="btn-primary">Bestil med gravering</a>
+      <a href="#produkter" class="btn-secondary">Se produkter</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="board-illustration">
+      <svg viewBox="0 0 380 480" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Board body -->
+        <rect x="40" y="60" width="300" height="360" rx="12" fill="#C4956A" opacity="0.3"/>
+        <rect x="44" y="64" width="292" height="352" rx="10" fill="#D4A574" opacity="0.25"/>
+        <!-- Wood grain lines -->
+        <line x1="60" y1="100" x2="320" y2="95" stroke="#A07040" stroke-width="1" opacity="0.3"/>
+        <line x1="58" y1="130" x2="322" y2="127" stroke="#A07040" stroke-width="0.7" opacity="0.2"/>
+        <line x1="60" y1="160" x2="320" y2="158" stroke="#A07040" stroke-width="1.2" opacity="0.25"/>
+        <line x1="56" y1="195" x2="324" y2="192" stroke="#A07040" stroke-width="0.8" opacity="0.2"/>
+        <line x1="60" y1="230" x2="320" y2="228" stroke="#A07040" stroke-width="1" opacity="0.3"/>
+        <line x1="58" y1="265" x2="322" y2="262" stroke="#A07040" stroke-width="0.7" opacity="0.2"/>
+        <line x1="60" y1="300" x2="320" y2="298" stroke="#A07040" stroke-width="1.1" opacity="0.25"/>
+        <line x1="56" y1="340" x2="324" y2="337" stroke="#A07040" stroke-width="0.8" opacity="0.2"/>
+        <line x1="60" y1="375" x2="320" y2="373" stroke="#A07040" stroke-width="1" opacity="0.3"/>
+        <!-- Handle slot -->
+        <rect x="160" y="80" width="60" height="24" rx="12" fill="white" opacity="0.6"/>
+        <!-- Engraving text (decorative) -->
+        <text x="190" y="220" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#6B4A30" opacity="0.6" font-style="italic">Kære</text>
+        <text x="190" y="248" text-anchor="middle" font-family="Georgia, serif" font-size="26" fill="#6B4A30" opacity="0.75" font-weight="300">Anna &amp; Lars</text>
+        <text x="190" y="278" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#8B6347" opacity="0.5">14. juni 2025</text>
+        <!-- Decorative floral corners (simple) -->
+        <circle cx="80" cy="310" r="3" fill="#8B6347" opacity="0.3"/>
+        <circle cx="300" cy="310" r="3" fill="#8B6347" opacity="0.3"/>
+        <line x1="86" y1="310" x2="120" y2="310" stroke="#8B6347" stroke-width="0.7" opacity="0.3"/>
+        <line x1="260" y1="310" x2="294" y2="310" stroke="#8B6347" stroke-width="0.7" opacity="0.3"/>
+        <!-- Oil finish sheen -->
+        <rect x="44" y="64" width="292" height="352" rx="10" fill="url(#sheen)" opacity="0.12"/>
+        <defs>
+          <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="white"/>
+            <stop offset="100%" stop-color="transparent"/>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<div class="grain-divider"></div>
+
+<!-- PRODUCTS -->
+<section class="products-section" id="produkter">
+  <div class="products-header">
+    <p class="section-label">Produktlinjer</p>
+    <h2 class="section-title">To størrelser – <em>én standard</em></h2>
+    <p style="color: var(--bark-mid); font-size: 0.95rem; line-height: 1.9;">
+      Begge brætter skæres fra FSC-certificeret massiv bøg, slibes gennem tre kornstørrelser 
+      og afsluttes med madklar hørfrøolie. Graveringen er inkluderet i prisen.
+    </p>
+  </div>
+
+  <div class="products-grid">
+    <!-- Large board -->
+    <div class="product-card">
+      <span class="product-badge">Mest populær</span>
+      <h3 class="product-name">Stort skærebræt</h3>
+      <p class="product-dims">40 × 25 × 2,6 cm</p>
+
+      <div class="product-board-svg">
+        <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:280px;">
+          <rect x="10" y="20" width="280" height="160" rx="8" fill="#C4956A" opacity="0.25"/>
+          <rect x="13" y="23" width="274" height="154" rx="6" fill="#D4A574" opacity="0.2"/>
+          <!-- grain -->
+          <line x1="20" y1="50" x2="280" y2="48" stroke="#8B6347" stroke-width="0.8" opacity="0.3"/>
+          <line x1="20" y1="80" x2="280" y2="78" stroke="#8B6347" stroke-width="0.6" opacity="0.2"/>
+          <line x1="20" y1="110" x2="280" y2="108" stroke="#8B6347" stroke-width="0.9" opacity="0.25"/>
+          <line x1="20" y1="140" x2="280" y2="138" stroke="#8B6347" stroke-width="0.7" opacity="0.2"/>
+          <!-- handle -->
+          <rect x="128" y="28" width="44" height="18" rx="9" fill="white" opacity="0.5"/>
+          <!-- Dimension arrows -->
+          <line x1="10" y1="195" x2="290" y2="195" stroke="#8B6347" stroke-width="1" opacity="0.6" marker-start="url(#arr)" marker-end="url(#arr)"/>
+          <text x="150" y="208" text-anchor="middle" font-family="'Jost', sans-serif" font-size="10" fill="#8B6347" opacity="0.8">40 cm</text>
+          <defs>
+            <marker id="arr" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#8B6347" opacity="0.6"/>
+            </marker>
+          </defs>
+        </svg>
+      </div>
+
+      <ul class="product-features">
+        <li>Massiv bøg, 26 mm tykkelse</li>
+        <li>Slibet 80 → 120 → 220 korn</li>
+        <li>Madklar hørfrøolie</li>
+        <li>Personlig pyrografi-gravering</li>
+        <li>Gaveindpakning inkluderet</li>
+      </ul>
+
+      <p class="product-price">450 kr.</p>
+      <p class="product-price-note">inkl. moms og gravering</p>
+      <a href="#bestil" class="btn-primary">Bestil dette bræt</a>
+    </div>
+
+    <!-- Medium board -->
+    <div class="product-card">
+      <span class="product-badge" style="background: rgba(107,74,48,0.1); color: var(--bark-mid);">Kompakt størrelse</span>
+      <h3 class="product-name">Mellemstort bræt</h3>
+      <p class="product-dims">30 × 19 × 2,6 cm</p>
+
+      <div class="product-board-svg">
+        <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:280px;">
+          <rect x="35" y="20" width="230" height="160" rx="8" fill="#C4956A" opacity="0.25"/>
+          <rect x="38" y="23" width="224" height="154" rx="6" fill="#D4A574" opacity="0.2"/>
+          <line x1="45" y1="50" x2="255" y2="48" stroke="#8B6347" stroke-width="0.8" opacity="0.3"/>
+          <line x1="45" y1="80" x2="255" y2="78" stroke="#8B6347" stroke-width="0.6" opacity="0.2"/>
+          <line x1="45" y1="110" x2="255" y2="108" stroke="#8B6347" stroke-width="0.9" opacity="0.25"/>
+          <line x1="45" y1="140" x2="255" y2="138" stroke="#8B6347" stroke-width="0.7" opacity="0.2"/>
+          <rect x="128" y="28" width="44" height="18" rx="9" fill="white" opacity="0.5"/>
+          <line x1="35" y1="195" x2="265" y2="195" stroke="#8B6347" stroke-width="1" opacity="0.6"/>
+          <text x="150" y="208" text-anchor="middle" font-family="'Jost', sans-serif" font-size="10" fill="#8B6347" opacity="0.8">30 cm</text>
+        </svg>
+      </div>
+
+      <ul class="product-features">
+        <li>Massiv bøg, 26 mm tykkelse</li>
+        <li>Slibet 80 → 120 → 220 korn</li>
+        <li>Madklar hørfrøolie</li>
+        <li>Personlig pyrografi-gravering</li>
+        <li>Gaveindpakning inkluderet</li>
+      </ul>
+
+      <p class="product-price">350 kr.</p>
+      <p class="product-price-note">inkl. moms og gravering</p>
+      <a href="#bestil" class="btn-primary">Bestil dette bræt</a>
+    </div>
+  </div>
+</section>
+
+<div class="grain-divider"></div>
+
+<!-- PROCESS -->
+<section class="process-section" id="proces">
+  <div class="process-sticky">
+    <p class="section-label">Håndværket</p>
+    <h2 class="section-title">Fra plade<br>til <em>gave</em></h2>
+    <p style="color: var(--bark-mid); font-size: 0.9rem; line-height: 1.9; margin-top: 1.5rem;">
+      Hvert bræt gennemgår seks trin. 
+      Der bruges ingen maskiner til overfladebehandling – 
+      kun hænder, slibepapir og olie.
+    </p>
+  </div>
+
+  <div class="process-steps">
+    <div class="process-step">
+      <span class="step-num">01</span>
+      <div class="step-content">
+        <h3>Råvare fra Silvan</h3>
+        <p>FSC-certificerede bøgebordplader. Et langt savsnit hos Silvans savværk opdeler pladen i to strimler. Resten skæres til på vores rundsav.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <span class="step-num">02</span>
+      <div class="step-content">
+        <h3>Grovslibning</h3>
+        <p>Alle overflader slibes med 80-korn. Savkanter rettes og hjørner brydes let, så brættet er behageligt at holde.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <span class="step-num">03</span>
+      <div class="step-content">
+        <h3>Finslibning</h3>
+        <p>120-korn fjerner ridser fra grovslibningen. Endeligt 220-korn giver en silkeblød overflade klar til gravering.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <span class="step-num">04</span>
+      <div class="step-content">
+        <h3>Pyrografi-gravering</h3>
+        <p>Din tekst overføres via kulpapir og brændes ind med præcis temperaturkontrol. Ingen to graveringer er ens – det er et håndværk.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <span class="step-num">05</span>
+      <div class="step-content">
+        <h3>Oliering med hørfrøolie</h3>
+        <p>Madklar hørfrøolie trænger ind i træet og beskytter brættet mod fugt. Graveringen fremstår dybere og smukkere efter oliering.</p>
+      </div>
+    </div>
+    <div class="process-step">
+      <span class="step-num">06</span>
+      <div class="step-content">
+        <h3>Emballering og afsendelse</h3>
+        <p>Hvert bræt kontrolleres, pakkes i genbrugelig emballage og sendes til dig inden for 3–5 hverdage.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATERIALS -->
+<section class="materials-section">
+  <p class="section-label">Materialer</p>
+  <h2 class="section-title">Kun det <em>bedste</em> er godt nok</h2>
+
+  <div class="materials-grid">
+    <div class="material-item">
+      <svg class="material-icon" viewBox="0 0 48 48" fill="none">
+        <circle cx="24" cy="24" r="20" stroke="#C4956A" stroke-width="1.5" opacity="0.5"/>
+        <path d="M24 8 C24 8 16 16 16 24 C16 32 24 40 24 40" stroke="#C4A882" stroke-width="1.5" fill="none"/>
+        <path d="M24 8 C24 8 32 16 32 24 C32 32 24 40 24 40" stroke="#C4A882" stroke-width="1.5" fill="none"/>
+        <line x1="8" y1="24" x2="40" y2="24" stroke="#C4A882" stroke-width="1" opacity="0.6"/>
+      </svg>
+      <h3 class="material-title">FSC-certificeret massiv bøg</h3>
+      <p class="material-text">Vi bruger kun bøg fra ansvarligt drevne skove med FSC-mærket. Bøg er hårdt, hygiejnisk og holder i årtier.</p>
+    </div>
+    <div class="material-item">
+      <svg class="material-icon" viewBox="0 0 48 48" fill="none">
+        <path d="M8 40 Q24 8 40 40" stroke="#C4A882" stroke-width="1.5" fill="none"/>
+        <circle cx="24" cy="28" r="3" fill="#C4956A" opacity="0.6"/>
+        <line x1="24" y1="31" x2="24" y2="42" stroke="#C4A882" stroke-width="1.2"/>
+      </svg>
+      <h3 class="material-title">Madklar hørfrøolie</h3>
+      <p class="material-text">100% naturlig og godkendt til kontakt med fødevarer. Trænger dybt ind og giver brættet en varm, levende finish.</p>
+    </div>
+    <div class="material-item">
+      <svg class="material-icon" viewBox="0 0 48 48" fill="none">
+        <rect x="12" y="18" width="24" height="20" rx="2" stroke="#C4A882" stroke-width="1.5" fill="none"/>
+        <path d="M18 18 V14 Q24 8 30 14 V18" stroke="#C4A882" stroke-width="1.5" fill="none"/>
+        <line x1="24" y1="26" x2="24" y2="32" stroke="#C4956A" stroke-width="1.5" opacity="0.8"/>
+      </svg>
+      <h3 class="material-title">Genbrugelig emballage</h3>
+      <p class="material-text">Hvert bræt pakkes i genanvendelige materialer med et håndskrevet tag. Klar til gavegivning fra dag ét.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ENGRAVING -->
+<section class="engraving-section" id="gravering">
+  <div class="engraving-visual">
+    <svg viewBox="0 0 340 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- Board -->
+      <rect x="20" y="20" width="300" height="300" rx="10" fill="#D4A574" opacity="0.2"/>
+      <!-- Decorative border -->
+      <rect x="34" y="34" width="272" height="272" rx="6" stroke="#8B6347" stroke-width="0.7" stroke-dasharray="4 4" fill="none" opacity="0.4"/>
+      <!-- Corner flourishes -->
+      <path d="M44 44 Q50 38 56 44" stroke="#8B6347" stroke-width="1" fill="none" opacity="0.5"/>
+      <path d="M284 44 Q290 38 296 44" stroke="#8B6347" stroke-width="1" fill="none" opacity="0.5"/>
+      <path d="M44 296 Q50 302 56 296" stroke="#8B6347" stroke-width="1" fill="none" opacity="0.5"/>
+      <path d="M284 296 Q290 302 296 296" stroke="#8B6347" stroke-width="1" fill="none" opacity="0.5"/>
+      <!-- Engraving text -->
+      <text x="170" y="125" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#6B4A30" opacity="0.5" font-style="italic">til</text>
+      <text x="170" y="168" text-anchor="middle" font-family="Georgia, serif" font-size="34" fill="#5C3820" opacity="0.8" font-weight="300">Morten</text>
+      <text x="170" y="200" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#8B6347" opacity="0.5" letter-spacing="3">– med kærlighed –</text>
+      <!-- Decorative line -->
+      <line x1="80" y1="220" x2="260" y2="220" stroke="#8B6347" stroke-width="0.5" opacity="0.35"/>
+      <text x="170" y="248" text-anchor="middle" font-family="Georgia, serif" font-size="13" fill="#8B6347" opacity="0.45" font-style="italic">50 år · 2025</text>
+      <!-- burn tool suggestion mark -->
+      <circle cx="294" cy="294" r="16" fill="#C4956A" opacity="0.25"/>
+      <path d="M288 298 Q294 284 300 298" stroke="#8B6347" stroke-width="1.2" fill="none" opacity="0.5"/>
+    </svg>
+  </div>
+
+  <div class="engraving-text">
+    <p class="section-label">Personlig gravering</p>
+    <h2 class="section-title">Dit budskab, <em>brændt ind</em> for altid</h2>
+    <p class="engraving-desc">
+      Pyrografi er kunsten at brænde tekst og motiver direkte ind i træet med kontrolleret varme. 
+      Resultatet er permanent, naturligt og smukkere end nogen sticker eller tryk.
+    </p>
+    <p class="engraving-desc">
+      Skriv hvad du ønsker i bestillingsformularen – navn, dato, citat eller et særligt budskab. 
+      Vi hjælper med layout og skrifttype.
+    </p>
+    <a href="#bestil" class="btn-primary">Design din gravering</a>
+  </div>
+</section>
+
+<div class="grain-divider"></div>
+
+<!-- ORDER -->
+<section class="order-section" id="bestil">
+  <div>
+    <p class="section-label">Bestilling</p>
+    <h2 class="section-title">Bestil dit <em>håndlavede</em> bræt</h2>
+    <p style="color: var(--bark-mid); font-size: 0.9rem; line-height: 1.9; margin: 1.5rem 0 2rem;">
+      Vælg produkt, beskriv din gravering og betal direkte herunder – 
+      med kort eller MobilePay. Vi går i gang inden for 24 timer.
+    </p>
+
+    <div class="form-note" style="margin-bottom: 1.25rem;">
+      <strong style="font-weight: 500; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bark);">Leveringstid</strong><br>
+      <span style="font-size: 0.85rem; color: var(--bark-mid);">
+        3–5 hverdage fra betaling modtaget.
+      </span>
+    </div>
+
+    <div class="form-note">
+      <strong style="font-weight: 500; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bark);">Sikker betaling</strong><br>
+      <p style="font-size: 0.85rem; color: var(--bark-mid); margin-top: 0.5rem; line-height: 1.7;">
+        Betalingen håndteres af Stripe – den samme teknologi der bruges af Amazon og Zalando. 
+        Vi ser aldrig dine kortoplysninger. MobilePay er tilgængeligt via kortbetaling.
+      </p>
+    </div>
+  </div>
+
+  <!-- CHECKOUT FORM -->
+  <div>
+    <div id="order-form-wrapper">
+      <div class="order-form">
+
+        <!-- Produkt -->
+        <div class="form-group">
+          <label for="product">Produkt</label>
+          <select id="product" onchange="updateSummary()">
+            <option value="stort">Stort skærebræt 40×25 cm – 450 kr.</option>
+            <option value="mellemstort">Mellemstort skærebræt 30×19 cm – 350 kr.</option>
+            <option value="begge">Begge størrelser – 800 kr.</option>
+          </select>
+        </div>
+
+        <!-- Navn + e-mail -->
+        <div class="form-group">
+          <label for="name">Dit navn</label>
+          <input type="text" id="name" placeholder="Fornavn Efternavn" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail (kvittering sendes her)</label>
+          <input type="email" id="email" placeholder="din@email.dk" required>
+        </div>
+
+        <!-- Gravering -->
+        <div class="form-group">
+          <label for="engraving">Ønsket gravering</label>
+          <textarea id="engraving" placeholder="Fx: Anna & Lars · Bryllup 14. juni 2025 · Med kærlighed" rows="3"></textarea>
+        </div>
+
+        <!-- Leveringsadresse -->
+        <div class="form-group">
+          <label for="address">Leveringsadresse</label>
+          <input type="text" id="address" placeholder="Vejnavn nr., postnr. by">
+        </div>
+
+        <!-- Ordreopsummering -->
+        <div class="checkout-summary" id="checkout-summary">
+          <div class="checkout-summary-row">
+            <span id="sum-product-label">Stort skærebræt</span>
+            <span id="sum-product-price">450 kr.</span>
+          </div>
+          <div class="checkout-summary-row">
+            <span>Heraf moms (25%)</span>
+            <span id="sum-moms">90 kr.</span>
+          </div>
+          <div class="checkout-summary-row">
+            <span>Gravering</span>
+            <span>Inkluderet</span>
+          </div>
+          <div class="checkout-summary-row">
+            <span>Total</span>
+            <span id="sum-total">450 kr.</span>
+          </div>
+        </div>
+
+        <!-- Betalingsmetode -->
+        <div>
+          <p style="font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bark-mid); margin-bottom: 0.75rem;">Betalingsmetode</p>
+          <div class="payment-methods">
+            <button type="button" class="payment-method-btn active" id="btn-kort" onclick="selectPayment('kort')">
+              <svg width="18" height="13" viewBox="0 0 18 13" fill="none"><rect x="0.5" y="0.5" width="17" height="12" rx="1.5" stroke="currentColor"/><line x1="0" y1="4" x2="18" y2="4" stroke="currentColor" stroke-width="1.5"/><rect x="2" y="7" width="4" height="1.5" rx="0.5" fill="currentColor" opacity="0.5"/></svg>
+              Kort
+            </button>
+            <button type="button" class="payment-method-btn" id="btn-mobilepay" onclick="selectPayment('mobilepay')">
+              <svg width="14" height="18" viewBox="0 0 14 18" fill="none"><rect x="0.5" y="0.5" width="13" height="17" rx="2.5" stroke="currentColor"/><circle cx="7" cy="14" r="1.5" fill="currentColor"/><line x1="4" y1="6" x2="10" y2="6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+              MobilePay
+            </button>
+          </div>
+        </div>
+
+        <!-- Stripe kortfelt -->
+        <div id="stripe-section">
+          <div class="form-group">
+            <label>Kortoplysninger</label>
+            <div id="stripe-card-element"></div>
+          </div>
+          <p id="payment-error"></p>
+          <button id="pay-btn" class="btn-primary" style="width:100%;margin-top:0.5rem;text-align:center" onclick="handleStripePayment()">
+            Betal nu
+          </button>
+          <div class="stripe-badge">
+            <svg width="38" height="16" viewBox="0 0 38 16" fill="none"><text x="0" y="13" font-family="sans-serif" font-size="11" font-weight="600" fill="currentColor">stripe</text></svg>
+            Sikker betaling via Stripe
+          </div>
+        </div>
+
+        <!-- MobilePay sektion -->
+        <div class="mobilepay-info" id="mobilepay-section">
+          <p style="font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--bark-mid);margin-bottom:0.5rem">MobilePay-nummer</p>
+          <p class="mobilepay-number" id="mobilepay-number">XXXX</p>
+          <p style="font-size:0.85rem;color:var(--bark-mid);line-height:1.7;margin-top:0.5rem">
+            Send beløbet til nummeret ovenfor og skriv din e-mail i beskeden, 
+            så vi kan matche din betaling med bestillingen.
+          </p>
+          <button class="btn-copy" onclick="copyMobilePay()">Kopiér nummer</button>
+          <p style="font-size:0.75rem;color:var(--ash);margin-top:1rem">
+            Klik "Send bestilling" herunder når du har betalt.
+          </p>
+          <button class="btn-primary" style="width:100%;margin-top:0.75rem;text-align:center" onclick="handleMobilePaySubmit()">
+            Jeg har betalt – send bestilling
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- SUCCESS STATE -->
+    <div id="payment-success">
+      <div class="success-icon">
+        <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M6 14l6 6 10-12" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <h3>Tak for din bestilling!</h3>
+      <p>Vi har modtaget din ordre og sender en bekræftelse til <strong id="success-email"></strong>.<br><br>Dit bræt er klar inden for 3–5 hverdage.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <p class="footer-logo">Træværk</p>
+  </div>
+  <div class="footer-text">
+    <p>Håndlavede skærebrætter i massiv bøg</p>
+    <p>FSC-certificeret · Pyrografi-gravering · Danmark</p>
+  </div>
+  <div class="footer-text" style="text-align: right;">
+    <p>Alle priser inkl. moms</p>
+    <p style="font-size: 0.75rem; opacity: 0.6; margin-top: 0.5rem;">© 2025 Træværk</p>
+  </div>
+</footer>
+
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+  // ── KONFIGURATION – udfyld disse værdier ──────────────────────────────
+  const STRIPE_PUBLIC_KEY = 'pk_live_INDSÆT_DIN_STRIPE_PUBLIC_KEY_HER';
+  const MOBILEPAY_NUMBER  = 'INDSÆT_JERES_MOBILEPAY_NUMMER'; // fx '12 34 56 78'
+  const WEBHOOK_URL       = 'INDSÆT_DIN_CLOUDFLARE_WORKER_URL'; // fx 'https://traevaerk.workers.dev'
+  // ─────────────────────────────────────────────────────────────────────
+
+  const PRICES = { stort: 450, mellemstort: 350, begge: 800 };
+  const LABELS = { stort: 'Stort skærebræt (40×25 cm)', mellemstort: 'Mellemstort skærebræt (30×19 cm)', begge: 'Begge størrelser' };
+
+  // Stripe init
+  let stripe, cardElement;
+  try {
+    stripe = Stripe(STRIPE_PUBLIC_KEY);
+    const elements = stripe.elements({ locale: 'da' });
+    cardElement = elements.create('card', {
+      style: {
+        base: {
+          fontFamily: "'Jost', sans-serif",
+          fontSize: '15px',
+          color: '#3D2B1A',
+          '::placeholder': { color: '#9B8F82' }
+        }
+      },
+      hidePostalCode: true
+    });
+    cardElement.mount('#stripe-card-element');
+  } catch(e) {
+    document.getElementById('stripe-card-element').innerHTML =
+      '<p style="font-size:0.8rem;color:var(--ash)">Kortbetaling indlæses – tilføj din Stripe public key.</p>';
+  }
+
+  // Opdatér ordreopsummering
+  function updateSummary() {
+    const val = document.getElementById('product').value;
+    const price = PRICES[val];
+    const moms = Math.round(price * 0.2);
+    document.getElementById('sum-product-label').textContent = LABELS[val];
+    document.getElementById('sum-product-price').textContent = price + ' kr.';
+    document.getElementById('sum-moms').textContent = moms + ' kr.';
+    document.getElementById('sum-total').textContent = price + ' kr.';
+  }
+
+  // Skift betalingsmetode
+  function selectPayment(method) {
+    document.getElementById('btn-kort').classList.toggle('active', method === 'kort');
+    document.getElementById('btn-mobilepay').classList.toggle('active', method === 'mobilepay');
+    document.getElementById('stripe-section').style.display = method === 'kort' ? 'block' : 'none';
+    const mpSection = document.getElementById('mobilepay-section');
+    if (method === 'mobilepay') {
+      document.getElementById('mobilepay-number').textContent = MOBILEPAY_NUMBER;
+      mpSection.classList.add('visible');
+    } else {
+      mpSection.classList.remove('visible');
+    }
+  }
+
+  // Validér formular
+  function validateForm() {
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    if (!name) { alert('Udfyld venligst dit navn.'); return false; }
+    if (!email || !email.includes('@')) { alert('Udfyld venligst en gyldig e-mail.'); return false; }
+    return true;
+  }
+
+  // Stripe kortbetaling
+  async function handleStripePayment() {
+    if (!validateForm()) return;
+    if (!stripe) { alert('Stripe er ikke konfigureret endnu. Indsæt din public key.'); return; }
+
+    const btn = document.getElementById('pay-btn');
+    const errEl = document.getElementById('payment-error');
+    btn.textContent = 'Behandler...';
+    btn.disabled = true;
+    errEl.style.display = 'none';
+
+    const product = document.getElementById('product').value;
+    const amount = PRICES[product] * 100; // øre
+
+    try {
+      // Opret PaymentIntent via din Cloudflare Worker
+      const res = await fetch(WEBHOOK_URL + '/create-payment-intent', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          amount,
+          product,
+          name: document.getElementById('name').value.trim(),
+          email: document.getElementById('email').value.trim(),
+          engraving: document.getElementById('engraving').value.trim(),
+          address: document.getElementById('address').value.trim()
+        })
+      });
+
+      const { clientSecret } = await res.json();
+
+      const { error, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+          card: cardElement,
+          billing_details: { name: document.getElementById('name').value.trim() }
+        }
+      });
+
+      if (error) {
+        errEl.textContent = error.message;
+        errEl.style.display = 'block';
+        btn.textContent = 'Prøv igen';
+        btn.disabled = false;
+      } else if (paymentIntent.status === 'succeeded') {
+        showSuccess();
+      }
+    } catch(e) {
+      errEl.textContent = 'Noget gik galt. Prøv igen eller kontakt os direkte.';
+      errEl.style.display = 'block';
+      btn.textContent = 'Betal nu';
+      btn.disabled = false;
+    }
+  }
+
+  // MobilePay manuel bekræftelse
+  async function handleMobilePaySubmit() {
+    if (!validateForm()) return;
+    const product = document.getElementById('product').value;
+    try {
+      await fetch(WEBHOOK_URL + '/mobilepay-order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          product,
+          amount: PRICES[product],
+          name: document.getElementById('name').value.trim(),
+          email: document.getElementById('email').value.trim(),
+          engraving: document.getElementById('engraving').value.trim(),
+          address: document.getElementById('address').value.trim(),
+          paymentMethod: 'mobilepay'
+        })
+      });
+    } catch(e) { /* Logger til Sheets via webhook */ }
+    showSuccess();
+  }
+
+  function showSuccess() {
+    document.getElementById('order-form-wrapper').style.display = 'none';
+    const s = document.getElementById('payment-success');
+    s.style.display = 'block';
+    document.getElementById('success-email').textContent = document.getElementById('email').value.trim();
+  }
+
+  function copyMobilePay() {
+    navigator.clipboard.writeText(MOBILEPAY_NUMBER).then(() => {
+      const btn = event.target;
+      btn.textContent = 'Kopieret ✓';
+      setTimeout(() => btn.textContent = 'Kopiér nummer', 2000);
+    });
+  }
+
+  // Smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        window.scrollTo({ top: target.getBoundingClientRect().top + window.scrollY - 80, behavior: 'smooth' });
+      }
+    });
+  });
+
+  // Init
+  updateSummary();
+  selectPayment('kort');
+</script>
+
+</body>
+</html>
