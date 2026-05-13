@@ -10,7 +10,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
+ 
   :root {
     --cream: #F5F0E8;
     --warm-white: #FAF8F4;
@@ -25,9 +25,9 @@
     --font-display: 'Cormorant Garamond', Georgia, serif;
     --font-body: 'Jost', sans-serif;
   }
-
+ 
   html { scroll-behavior: smooth; }
-
+ 
   body {
     background: var(--cream);
     color: var(--bark);
@@ -37,7 +37,7 @@
     line-height: 1.7;
     overflow-x: hidden;
   }
-
+ 
   /* ── NAV ── */
   nav {
     position: fixed;
@@ -51,7 +51,7 @@
     backdrop-filter: blur(8px);
     border-bottom: 1px solid var(--grain-light);
   }
-
+ 
   .nav-logo {
     font-family: var(--font-display);
     font-size: 1.5rem;
@@ -60,13 +60,13 @@
     color: var(--bark);
     text-decoration: none;
   }
-
+ 
   .nav-links {
     display: flex;
     gap: 2.5rem;
     list-style: none;
   }
-
+ 
   .nav-links a {
     font-size: 0.8rem;
     letter-spacing: 0.12em;
@@ -75,9 +75,9 @@
     text-decoration: none;
     transition: color 0.2s;
   }
-
+ 
   .nav-links a:hover { color: var(--bark); }
-
+ 
   /* ── HERO ── */
   .hero {
     min-height: 100vh;
@@ -85,7 +85,7 @@
     grid-template-columns: 1fr 1fr;
     padding-top: 5rem;
   }
-
+ 
   .hero-left {
     display: flex;
     flex-direction: column;
@@ -93,7 +93,7 @@
     padding: 8vw 5vw 8vw 8vw;
     position: relative;
   }
-
+ 
   .hero-left::before {
     content: '';
     position: absolute;
@@ -105,7 +105,7 @@
     opacity: 0.5;
     pointer-events: none;
   }
-
+ 
   .hero-eyebrow {
     font-size: 0.72rem;
     letter-spacing: 0.18em;
@@ -116,7 +116,7 @@
     align-items: center;
     gap: 0.75rem;
   }
-
+ 
   .hero-eyebrow::before {
     content: '';
     display: block;
@@ -124,7 +124,7 @@
     height: 1px;
     background: var(--moss);
   }
-
+ 
   .hero-title {
     font-family: var(--font-display);
     font-size: clamp(2.8rem, 5vw, 4.5rem);
@@ -134,12 +134,12 @@
     color: var(--bark);
     margin-bottom: 1.5rem;
   }
-
+ 
   .hero-title em {
     font-style: italic;
     color: var(--bark-mid);
   }
-
+ 
   .hero-sub {
     font-size: 1rem;
     color: var(--bark-mid);
@@ -147,13 +147,13 @@
     margin-bottom: 3rem;
     line-height: 1.8;
   }
-
+ 
   .hero-cta-group {
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
   }
-
+ 
   .btn-primary {
     display: inline-block;
     padding: 0.9rem 2.4rem;
@@ -169,9 +169,9 @@
     cursor: pointer;
     transition: background 0.25s;
   }
-
+ 
   .btn-primary:hover { background: var(--bark-light); }
-
+ 
   .btn-secondary {
     display: inline-block;
     padding: 0.9rem 2.4rem;
@@ -187,9 +187,9 @@
     cursor: pointer;
     transition: border-color 0.25s, color 0.25s;
   }
-
+ 
   .btn-secondary:hover { border-color: var(--bark); }
-
+ 
   .hero-right {
     background: var(--warm-white);
     display: flex;
@@ -199,7 +199,7 @@
     position: relative;
     overflow: hidden;
   }
-
+ 
   /* Cutting board illustration placeholder */
   .board-illustration {
     width: 100%;
@@ -207,15 +207,15 @@
     aspect-ratio: 4/5;
     position: relative;
   }
-
+ 
   .board-illustration svg {
     width: 100%;
     height: 100%;
   }
-
+ 
   /* ── SECTION COMMONS ── */
   section { padding: 8rem 8vw; }
-
+ 
   .section-label {
     font-size: 0.72rem;
     letter-spacing: 0.18em;
@@ -226,7 +226,7 @@
     align-items: center;
     gap: 0.75rem;
   }
-
+ 
   .section-label::before {
     content: '';
     display: block;
@@ -234,7 +234,7 @@
     height: 1px;
     background: var(--moss);
   }
-
+ 
   .section-title {
     font-family: var(--font-display);
     font-size: clamp(2rem, 3.5vw, 3rem);
@@ -243,28 +243,28 @@
     color: var(--bark);
     margin-bottom: 1.5rem;
   }
-
+ 
   .section-title em {
     font-style: italic;
     color: var(--bark-mid);
   }
-
+ 
   /* ── PRODUCTS ── */
   .products-section {
     background: var(--warm-white);
   }
-
+ 
   .products-header {
     max-width: 50ch;
     margin-bottom: 5rem;
   }
-
+ 
   .products-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2px;
   }
-
+ 
   .product-card {
     background: var(--cream);
     padding: 4rem 3rem;
@@ -272,9 +272,9 @@
     overflow: hidden;
     transition: background 0.3s;
   }
-
+ 
   .product-card:hover { background: #EDE7DA; }
-
+ 
   .product-badge {
     font-size: 0.68rem;
     letter-spacing: 0.15em;
@@ -285,7 +285,7 @@
     display: inline-block;
     margin-bottom: 2rem;
   }
-
+ 
   .product-name {
     font-family: var(--font-display);
     font-size: 2rem;
@@ -293,23 +293,23 @@
     color: var(--bark);
     margin-bottom: 0.5rem;
   }
-
+ 
   .product-dims {
     font-size: 0.85rem;
     color: var(--ash);
     letter-spacing: 0.05em;
     margin-bottom: 2rem;
   }
-
+ 
   .product-board-svg {
     margin: 2rem 0;
   }
-
+ 
   .product-features {
     list-style: none;
     margin-bottom: 2.5rem;
   }
-
+ 
   .product-features li {
     font-size: 0.88rem;
     color: var(--bark-mid);
@@ -319,13 +319,13 @@
     align-items: center;
     gap: 0.75rem;
   }
-
+ 
   .product-features li::before {
     content: '→';
     color: var(--moss);
     font-size: 0.75rem;
   }
-
+ 
   .product-price {
     font-family: var(--font-display);
     font-size: 2.2rem;
@@ -333,13 +333,13 @@
     color: var(--bark);
     margin-bottom: 0.25rem;
   }
-
+ 
   .product-price-note {
     font-size: 0.78rem;
     color: var(--ash);
     margin-bottom: 2rem;
   }
-
+ 
   /* ── PROCESS ── */
   .process-section {
     display: grid;
@@ -348,18 +348,18 @@
     align-items: start;
     padding: 8rem 8vw;
   }
-
+ 
   .process-sticky {
     position: sticky;
     top: 8rem;
   }
-
+ 
   .process-steps {
     display: flex;
     flex-direction: column;
     gap: 0;
   }
-
+ 
   .process-step {
     display: grid;
     grid-template-columns: 3rem 1fr;
@@ -367,7 +367,7 @@
     padding: 2.5rem 0;
     border-top: 1px solid var(--grain-light);
   }
-
+ 
   .step-num {
     font-family: var(--font-display);
     font-size: 2.5rem;
@@ -376,7 +376,7 @@
     line-height: 1;
     padding-top: 0.2rem;
   }
-
+ 
   .step-content h3 {
     font-family: var(--font-display);
     font-size: 1.4rem;
@@ -384,40 +384,40 @@
     color: var(--bark);
     margin-bottom: 0.5rem;
   }
-
+ 
   .step-content p {
     font-size: 0.9rem;
     color: var(--bark-mid);
     line-height: 1.8;
   }
-
+ 
   /* ── MATERIALS ── */
   .materials-section {
     background: var(--bark);
     color: var(--cream);
     padding: 8rem 8vw;
   }
-
+ 
   .materials-section .section-label { color: var(--grain); }
   .materials-section .section-label::before { background: var(--grain); }
   .materials-section .section-title { color: var(--cream); }
   .materials-section .section-title em { color: var(--grain); }
-
+ 
   .materials-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
     margin-top: 4rem;
   }
-
+ 
   .material-item { border-top: 1px solid rgba(196, 168, 130, 0.3); padding-top: 2rem; }
-
+ 
   .material-icon {
     width: 3rem;
     height: 3rem;
     margin-bottom: 1.5rem;
   }
-
+ 
   .material-title {
     font-family: var(--font-display);
     font-size: 1.3rem;
@@ -425,13 +425,13 @@
     color: var(--cream);
     margin-bottom: 0.75rem;
   }
-
+ 
   .material-text {
     font-size: 0.88rem;
     color: var(--grain);
     line-height: 1.8;
   }
-
+ 
   /* ── ENGRAVING ── */
   .engraving-section {
     display: grid;
@@ -441,7 +441,7 @@
     padding: 8rem 8vw;
     background: var(--warm-white);
   }
-
+ 
   .engraving-visual {
     aspect-ratio: 1;
     background: var(--cream);
@@ -452,23 +452,23 @@
     padding: 3rem;
     position: relative;
   }
-
+ 
   .engraving-visual svg {
     width: 100%;
     height: auto;
   }
-
+ 
   .engraving-text .section-title {
     margin-bottom: 1.5rem;
   }
-
+ 
   .engraving-desc {
     font-size: 0.95rem;
     color: var(--bark-mid);
     line-height: 1.9;
     margin-bottom: 2.5rem;
   }
-
+ 
   /* ── CONTACT / ORDER ── */
   .order-section {
     padding: 8rem 8vw;
@@ -477,26 +477,26 @@
     gap: 8vw;
     align-items: start;
   }
-
+ 
   .order-form {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
   }
-
+ 
   .form-group {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
   }
-
+ 
   .form-group label {
     font-size: 0.75rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--bark-mid);
   }
-
+ 
   .form-group input,
   .form-group select,
   .form-group textarea {
@@ -513,18 +513,18 @@
     appearance: none;
     border-radius: 0;
   }
-
+ 
   .form-group input:focus,
   .form-group select:focus,
   .form-group textarea:focus {
     border-bottom-color: var(--bark);
   }
-
+ 
   .form-group textarea {
     resize: vertical;
     min-height: 100px;
   }
-
+ 
   .form-note {
     font-size: 0.8rem;
     color: var(--ash);
@@ -533,7 +533,7 @@
     border: 1px solid var(--grain-light);
     background: var(--warm-white);
   }
-
+ 
   /* ── STRIPE CHECKOUT ── */
   .checkout-summary {
     background: var(--warm-white);
@@ -541,7 +541,7 @@
     padding: 1.5rem;
     margin-bottom: 1.5rem;
   }
-
+ 
   .checkout-summary-row {
     display: flex;
     justify-content: space-between;
@@ -551,7 +551,7 @@
     padding: 0.4rem 0;
     border-bottom: 1px solid var(--grain-light);
   }
-
+ 
   .checkout-summary-row:last-child {
     border-bottom: none;
     font-family: var(--font-display);
@@ -561,18 +561,18 @@
     padding-top: 0.75rem;
     margin-top: 0.25rem;
   }
-
+ 
   .checkout-summary-row span:last-child {
     font-weight: 500;
   }
-
+ 
   .payment-methods {
     display: flex;
     gap: 0.75rem;
     margin-bottom: 1.5rem;
     flex-wrap: wrap;
   }
-
+ 
   .payment-method-btn {
     flex: 1;
     min-width: 120px;
@@ -591,23 +591,23 @@
     color: var(--bark-mid);
     transition: border-color 0.2s, color 0.2s;
   }
-
+ 
   .payment-method-btn.active {
     border-color: var(--bark);
     color: var(--bark);
     background: var(--cream);
   }
-
+ 
   .payment-method-btn:hover {
     border-color: var(--bark-mid);
   }
-
+ 
   #stripe-card-element {
     border-bottom: 1px solid var(--grain);
     padding: 0.75rem 0;
     margin-bottom: 0.5rem;
   }
-
+ 
   .stripe-badge {
     display: flex;
     align-items: center;
@@ -617,22 +617,22 @@
     letter-spacing: 0.05em;
     margin-top: 0.75rem;
   }
-
+ 
   .stripe-badge svg { opacity: 0.5; }
-
+ 
   #payment-error {
     color: #c0392b;
     font-size: 0.82rem;
     margin-top: 0.5rem;
     display: none;
   }
-
+ 
   #payment-success {
     text-align: center;
     padding: 3rem 1rem;
     display: none;
   }
-
+ 
   #payment-success .success-icon {
     width: 4rem;
     height: 4rem;
@@ -643,7 +643,7 @@
     justify-content: center;
     margin: 0 auto 1.5rem;
   }
-
+ 
   #payment-success h3 {
     font-family: var(--font-display);
     font-size: 2rem;
@@ -651,22 +651,22 @@
     color: var(--bark);
     margin-bottom: 0.75rem;
   }
-
+ 
   #payment-success p {
     font-size: 0.9rem;
     color: var(--bark-mid);
     line-height: 1.8;
   }
-
+ 
   .mobilepay-info {
     background: var(--warm-white);
     border: 1px solid var(--grain-light);
     padding: 1.5rem;
     display: none;
   }
-
+ 
   .mobilepay-info.visible { display: block; }
-
+ 
   .mobilepay-number {
     font-family: var(--font-display);
     font-size: 2.5rem;
@@ -675,7 +675,7 @@
     margin: 0.5rem 0;
     letter-spacing: 0.05em;
   }
-
+ 
   .btn-copy {
     display: inline-flex;
     align-items: center;
@@ -692,9 +692,9 @@
     transition: border-color 0.2s;
     margin-top: 0.75rem;
   }
-
+ 
   .btn-copy:hover { border-color: var(--bark); color: var(--bark); }
-
+ 
   /* ── FOOTER ── */
   footer {
     background: var(--bark);
@@ -706,27 +706,27 @@
     flex-wrap: wrap;
     gap: 2rem;
   }
-
+ 
   .footer-logo {
     font-family: var(--font-display);
     font-size: 1.6rem;
     font-weight: 300;
     color: var(--cream);
   }
-
+ 
   .footer-text {
     font-size: 0.8rem;
     color: var(--grain);
     line-height: 1.8;
   }
-
+ 
   /* ── DIVIDER ── */
   .grain-divider {
     height: 1px;
     background: var(--grain-light);
     margin: 0;
   }
-
+ 
   /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
     .hero { grid-template-columns: 1fr; }
@@ -738,13 +738,13 @@
     .order-section { grid-template-columns: 1fr; }
     nav .nav-links { display: none; }
   }
-
+ 
   /* ── ANIMATIONS ── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(24px); }
     to { opacity: 1; transform: translateY(0); }
   }
-
+ 
   .hero-eyebrow { animation: fadeUp 0.7s ease both; }
   .hero-title { animation: fadeUp 0.7s 0.15s ease both; }
   .hero-sub { animation: fadeUp 0.7s 0.25s ease both; }
@@ -752,7 +752,7 @@
 </style>
 </head>
 <body>
-
+ 
 <!-- NAV -->
 <nav>
   <a href="#" class="nav-logo">Træværk</a>
@@ -763,7 +763,7 @@
     <li><a href="#bestil">Bestil</a></li>
   </ul>
 </nav>
-
+ 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-left">
@@ -781,7 +781,7 @@
       <a href="#produkter" class="btn-secondary">Se produkter</a>
     </div>
   </div>
-
+ 
   <div class="hero-right">
     <div class="board-illustration">
       <svg viewBox="0 0 380 480" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -821,9 +821,9 @@
     </div>
   </div>
 </section>
-
+ 
 <div class="grain-divider"></div>
-
+ 
 <!-- PRODUCTS -->
 <section class="products-section" id="produkter">
   <div class="products-header">
@@ -834,14 +834,14 @@
       og afsluttes med madklar hørfrøolie. Graveringen er inkluderet i prisen.
     </p>
   </div>
-
+ 
   <div class="products-grid">
     <!-- Large board -->
     <div class="product-card">
       <span class="product-badge">Mest populær</span>
       <h3 class="product-name">Stort skærebræt</h3>
       <p class="product-dims">40 × 25 × 2,6 cm</p>
-
+ 
       <div class="product-board-svg">
         <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:280px;">
           <rect x="10" y="20" width="280" height="160" rx="8" fill="#C4956A" opacity="0.25"/>
@@ -863,7 +863,7 @@
           </defs>
         </svg>
       </div>
-
+ 
       <ul class="product-features">
         <li>Massiv bøg, 26 mm tykkelse</li>
         <li>Slibet 80 → 120 → 220 korn</li>
@@ -871,18 +871,18 @@
         <li>Personlig pyrografi-gravering</li>
         <li>Gaveindpakning inkluderet</li>
       </ul>
-
+ 
       <p class="product-price">450 kr.</p>
       <p class="product-price-note">inkl. moms og gravering</p>
       <a href="#bestil" class="btn-primary">Bestil dette bræt</a>
     </div>
-
+ 
     <!-- Medium board -->
     <div class="product-card">
       <span class="product-badge" style="background: rgba(107,74,48,0.1); color: var(--bark-mid);">Kompakt størrelse</span>
       <h3 class="product-name">Mellemstort bræt</h3>
       <p class="product-dims">30 × 19 × 2,6 cm</p>
-
+ 
       <div class="product-board-svg">
         <svg viewBox="0 0 300 200" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%; max-width:280px;">
           <rect x="35" y="20" width="230" height="160" rx="8" fill="#C4956A" opacity="0.25"/>
@@ -896,7 +896,7 @@
           <text x="150" y="208" text-anchor="middle" font-family="'Jost', sans-serif" font-size="10" fill="#8B6347" opacity="0.8">30 cm</text>
         </svg>
       </div>
-
+ 
       <ul class="product-features">
         <li>Massiv bøg, 26 mm tykkelse</li>
         <li>Slibet 80 → 120 → 220 korn</li>
@@ -904,16 +904,16 @@
         <li>Personlig pyrografi-gravering</li>
         <li>Gaveindpakning inkluderet</li>
       </ul>
-
+ 
       <p class="product-price">350 kr.</p>
       <p class="product-price-note">inkl. moms og gravering</p>
       <a href="#bestil" class="btn-primary">Bestil dette bræt</a>
     </div>
   </div>
 </section>
-
+ 
 <div class="grain-divider"></div>
-
+ 
 <!-- PROCESS -->
 <section class="process-section" id="proces">
   <div class="process-sticky">
@@ -925,7 +925,7 @@
       kun hænder, slibepapir og olie.
     </p>
   </div>
-
+ 
   <div class="process-steps">
     <div class="process-step">
       <span class="step-num">01</span>
@@ -971,12 +971,12 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- MATERIALS -->
 <section class="materials-section">
   <p class="section-label">Materialer</p>
   <h2 class="section-title">Kun det <em>bedste</em> er godt nok</h2>
-
+ 
   <div class="materials-grid">
     <div class="material-item">
       <svg class="material-icon" viewBox="0 0 48 48" fill="none">
@@ -1008,7 +1008,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- ENGRAVING -->
 <section class="engraving-section" id="gravering">
   <div class="engraving-visual">
@@ -1034,7 +1034,7 @@
       <path d="M288 298 Q294 284 300 298" stroke="#8B6347" stroke-width="1.2" fill="none" opacity="0.5"/>
     </svg>
   </div>
-
+ 
   <div class="engraving-text">
     <p class="section-label">Personlig gravering</p>
     <h2 class="section-title">Dit budskab, <em>brændt ind</em> for altid</h2>
@@ -1049,9 +1049,9 @@
     <a href="#bestil" class="btn-primary">Design din gravering</a>
   </div>
 </section>
-
+ 
 <div class="grain-divider"></div>
-
+ 
 <!-- ORDER -->
 <section class="order-section" id="bestil">
   <div>
@@ -1061,14 +1061,14 @@
       Vælg produkt, beskriv din gravering og betal direkte herunder – 
       med kort eller MobilePay. Vi går i gang inden for 24 timer.
     </p>
-
+ 
     <div class="form-note" style="margin-bottom: 1.25rem;">
       <strong style="font-weight: 500; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bark);">Leveringstid</strong><br>
       <span style="font-size: 0.85rem; color: var(--bark-mid);">
         3–5 hverdage fra betaling modtaget.
       </span>
     </div>
-
+ 
     <div class="form-note">
       <strong style="font-weight: 500; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--bark);">Sikker betaling</strong><br>
       <p style="font-size: 0.85rem; color: var(--bark-mid); margin-top: 0.5rem; line-height: 1.7;">
@@ -1077,12 +1077,12 @@
       </p>
     </div>
   </div>
-
+ 
   <!-- CHECKOUT FORM -->
   <div>
     <div id="order-form-wrapper">
       <div class="order-form">
-
+ 
         <!-- Produkt -->
         <div class="form-group">
           <label for="product">Produkt</label>
@@ -1092,7 +1092,7 @@
             <option value="begge">Begge størrelser – 800 kr.</option>
           </select>
         </div>
-
+ 
         <!-- Navn + e-mail -->
         <div class="form-group">
           <label for="name">Dit navn</label>
@@ -1102,19 +1102,19 @@
           <label for="email">E-mail (kvittering sendes her)</label>
           <input type="email" id="email" placeholder="din@email.dk" required>
         </div>
-
+ 
         <!-- Gravering -->
         <div class="form-group">
           <label for="engraving">Ønsket gravering</label>
           <textarea id="engraving" placeholder="Fx: Anna & Lars · Bryllup 14. juni 2025 · Med kærlighed" rows="3"></textarea>
         </div>
-
+ 
         <!-- Leveringsadresse -->
         <div class="form-group">
           <label for="address">Leveringsadresse</label>
           <input type="text" id="address" placeholder="Vejnavn nr., postnr. by">
         </div>
-
+ 
         <!-- Ordreopsummering -->
         <div class="checkout-summary" id="checkout-summary">
           <div class="checkout-summary-row">
@@ -1134,7 +1134,7 @@
             <span id="sum-total">450 kr.</span>
           </div>
         </div>
-
+ 
         <!-- Betalingsmetode -->
         <div>
           <p style="font-size: 0.75rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--bark-mid); margin-bottom: 0.75rem;">Betalingsmetode</p>
@@ -1149,7 +1149,7 @@
             </button>
           </div>
         </div>
-
+ 
         <!-- Stripe kortfelt -->
         <div id="stripe-section">
           <div class="form-group">
@@ -1165,7 +1165,7 @@
             Sikker betaling via Stripe
           </div>
         </div>
-
+ 
         <!-- MobilePay sektion -->
         <div class="mobilepay-info" id="mobilepay-section">
           <p style="font-size:0.75rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--bark-mid);margin-bottom:0.5rem">MobilePay-nummer</p>
@@ -1182,10 +1182,10 @@
             Jeg har betalt – send bestilling
           </button>
         </div>
-
+ 
       </div>
     </div>
-
+ 
     <!-- SUCCESS STATE -->
     <div id="payment-success">
       <div class="success-icon">
@@ -1196,7 +1196,7 @@
     </div>
   </div>
 </section>
-
+ 
 <!-- FOOTER -->
 <footer>
   <div>
@@ -1211,18 +1211,18 @@
     <p style="font-size: 0.75rem; opacity: 0.6; margin-top: 0.5rem;">© 2025 Træværk</p>
   </div>
 </footer>
-
+ 
 <script src="https://js.stripe.com/v3/"></script>
 <script>
   // ── KONFIGURATION – udfyld disse værdier ──────────────────────────────
   const STRIPE_PUBLIC_KEY = 'pk_test_51TWXFd6cKVKJGJEfp5uMCT8GseuvPDOwfbCtv7WJDkg1GfpMzwhdZ7ngnbPWPDOpqR7BRJbfXmty3w6k2DYj3pDg006KgfGcLj';
   const MOBILEPAY_NUMBER  = 'INDSÆT_JERES_MOBILEPAY_NUMMER'; // fx '12 34 56 78'
-  const WEBHOOK_URL       = 'INDSÆT_DIN_CLOUDFLARE_WORKER_URL'; // fx 'https://traevaerk.workers.dev'
+  const WEBHOOK_URL       = 'https://khashab.khashab.workers.dev';
   // ─────────────────────────────────────────────────────────────────────
-
+ 
   const PRICES = { stort: 450, mellemstort: 350, begge: 800 };
   const LABELS = { stort: 'Stort skærebræt (40×25 cm)', mellemstort: 'Mellemstort skærebræt (30×19 cm)', begge: 'Begge størrelser' };
-
+ 
   // Stripe init
   let stripe, cardElement;
   try {
@@ -1244,7 +1244,7 @@
     document.getElementById('stripe-card-element').innerHTML =
       '<p style="font-size:0.8rem;color:var(--ash)">Kortbetaling indlæses – tilføj din Stripe public key.</p>';
   }
-
+ 
   // Opdatér ordreopsummering
   function updateSummary() {
     const val = document.getElementById('product').value;
@@ -1255,7 +1255,7 @@
     document.getElementById('sum-moms').textContent = moms + ' kr.';
     document.getElementById('sum-total').textContent = price + ' kr.';
   }
-
+ 
   // Skift betalingsmetode
   function selectPayment(method) {
     document.getElementById('btn-kort').classList.toggle('active', method === 'kort');
@@ -1269,7 +1269,7 @@
       mpSection.classList.remove('visible');
     }
   }
-
+ 
   // Validér formular
   function validateForm() {
     const name = document.getElementById('name').value.trim();
@@ -1278,21 +1278,21 @@
     if (!email || !email.includes('@')) { alert('Udfyld venligst en gyldig e-mail.'); return false; }
     return true;
   }
-
+ 
   // Stripe kortbetaling
   async function handleStripePayment() {
     if (!validateForm()) return;
     if (!stripe) { alert('Stripe er ikke konfigureret endnu. Indsæt din public key.'); return; }
-
+ 
     const btn = document.getElementById('pay-btn');
     const errEl = document.getElementById('payment-error');
     btn.textContent = 'Behandler...';
     btn.disabled = true;
     errEl.style.display = 'none';
-
+ 
     const product = document.getElementById('product').value;
     const amount = PRICES[product] * 100; // øre
-
+ 
     try {
       // Opret PaymentIntent via din Cloudflare Worker
       const res = await fetch(WEBHOOK_URL + '/create-payment-intent', {
@@ -1307,16 +1307,16 @@
           address: document.getElementById('address').value.trim()
         })
       });
-
+ 
       const { clientSecret } = await res.json();
-
+ 
       const { error, paymentIntent } = await stripe.confirmCardPayment(clientSecret, {
         payment_method: {
           card: cardElement,
           billing_details: { name: document.getElementById('name').value.trim() }
         }
       });
-
+ 
       if (error) {
         errEl.textContent = error.message;
         errEl.style.display = 'block';
@@ -1332,7 +1332,7 @@
       btn.disabled = false;
     }
   }
-
+ 
   // MobilePay manuel bekræftelse
   async function handleMobilePaySubmit() {
     if (!validateForm()) return;
@@ -1354,14 +1354,14 @@
     } catch(e) { /* Logger til Sheets via webhook */ }
     showSuccess();
   }
-
+ 
   function showSuccess() {
     document.getElementById('order-form-wrapper').style.display = 'none';
     const s = document.getElementById('payment-success');
     s.style.display = 'block';
     document.getElementById('success-email').textContent = document.getElementById('email').value.trim();
   }
-
+ 
   function copyMobilePay() {
     navigator.clipboard.writeText(MOBILEPAY_NUMBER).then(() => {
       const btn = event.target;
@@ -1369,7 +1369,7 @@
       setTimeout(() => btn.textContent = 'Kopiér nummer', 2000);
     });
   }
-
+ 
   // Smooth scroll
   document.querySelectorAll('a[href^="#"]').forEach(a => {
     a.addEventListener('click', function(e) {
@@ -1380,11 +1380,11 @@
       }
     });
   });
-
+ 
   // Init
   updateSummary();
   selectPayment('kort');
 </script>
-
+ 
 </body>
 </html>
