@@ -1,10 +1,4 @@
-name = "khashab" 
+name = "khashab"
 main = "webhook.js"
 compatibility_date = "2026-05-13"
 compatibility_flags = ["nodejs_compat"]
-
-[vars]
-# Disse variabler sætter du i Cloudflare Dashboard → Settings → Variables and Secrets
-# STRIPE_SECRET_KEY = "sk_test_..."
-# STRIPE_WEBHOOK_SECRET = "whsec_..."
-# SHEETS_WEBHOOK_URL = "https://script.google.com/..."
